@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwright:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
     <title>Project1</title>
 </head>
 <body class="bg-slate-700 overflow-x-hidden">
     <div class="flex justify-center h-fit">
-        <h1 class="font-medium text-2xl text-white rounded-lg mx-2 mt-4 hover:border-gray-800 p-2">Number Guessing Game</h1>
+        <h1 class="font-d font-medium p-2 text-2xl text-white rounded-lg mx-2 hover:border-gray-800 ">Number Guessing Game</h1>
     </div>
 
     <!-- main -->
-    <main class="flex flex-col bg-slate-600 font-custom h-screen">
-        <div class="flex flex-col bg-white h-auto w-50 p-5 mt-20 justify-center mx-auto">
+    <main class="flex flex-col items-center justify-center bg-gradient-to-b from-blue-200 to-green-100  h-screen">
+        <div class="flex flex-col bg-white font-extrabold h-auto p-5 pb-12 justify-center mx-auto">
             <p class="flex flex-col p-2 text-xl text-slate-900 rounded-md font-semibold text-center mt-6 leading-6">Try a random number between 1 and 100 <span>You have 10 attempts to guess the right number</span></p>
 
             <form id="form" class="mt-8 flex flex-col justify-center mx-auto gap-2">
                 <label class="text-2xl text-slate-900" for="guessField" id="guess">Guess a number</label>
                 <input type="text" id="guessField" class="guessField p-1 rounded-lg w-fit border border-gray-950">
-                <button type="submit" class="bg-slate-950 hover:opacity-90 text-white rounded-md p-1" id="subt">Submit Guess</button>
+                <button type="submit" class="bg-green-200 hover:opacity-90 rounded-md p-1" id="subt">Submit Guess</button>
             </form>
+            <p id="feedback" class="rounded-lg transition-opacity text-center text-black text-xl mt-4"></p>
 
-            <p id="feedback" class="text-center text-black text-xl mt-4"></p>
         </div>
+
+<div class="mt-4 text-xl leading-tight">
+    <p>Previous Guesses: <span id="prg" class="text-sm"></span> </p>
+    <p id="remaining">Guesses Remaining : <span id="cnt"></span> </p>
+</div>
     </main>
 
     <script src="script.js"></script>
