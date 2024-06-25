@@ -42,7 +42,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
     result.innerHTML = "Congratulations You got the right number!"
     gameOver = true;
   }else{
-    result.innerHTML = `Original number = ${randomNumber}`
+    result.innerHTML = `Try again!`
   }
 
   // Check if count has reached 0
