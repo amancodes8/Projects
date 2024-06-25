@@ -23,18 +23,20 @@
                 <input type="text" id="guessField" class="guessField p-1 rounded-lg w-fit border border-gray-950">
                 <button type="submit" class="bg-green-200 hover:opacity-90 rounded-md p-1" id="subt">Submit Guess</button>
             </form>
-            <img id="refresh" onclick="rotate()" class="flex justify-center rounded-full max-h-12 max-w-12 bg-black " src="refre.png" alt="">
             <p id="feedback" class="font-light rounded-lg  text-center text-black text-lg mt-4"></p>
 
         </div>
 
-<div class="mt-4 text-xl leading-tight">
+<div id="hideOnWin" class="mt-4 text-xl leading-tight">
     <p>Previous Guesses: <span id="prg" class="text-sm"></span> </p>
     <p id="remaining">Guesses Remaining : <span id="cnt"></span> </p>
 </div>
 <div>
     <p id="result"></p>   
  </div>
+ <img id="refresh" onclick="rotate()" class="flex mt-4 justify-center rounded-full max-h-12 max-w-12 bg-black " src="refre.png" alt="">
+ <p>Restart here</p>
+
     </main>
  
     <script src="script.js"></script>
