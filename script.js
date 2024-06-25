@@ -21,13 +21,13 @@ document.getElementById('form').addEventListener('submit', function(e) {
   let flag = 0;
 
   if (v1 < 1 || v1 > 100) {
-    feedback.textContent = "Please input values between 1 and 100";
+    feedback.style.display = "block";
+    feedback.textContent = "Please enter values between 1 and 100!";
     feedback.style.border = '1px solid red';
   } else {
-    feedback.textContent = "Your guess is " + v1;
     flag = 1;
     count = count - 1;
-    feedback.style.border = '1px solid green';
+    feedback.style.display = "none";
     prguess.push(v1);
 
     // You can add further logic here for the game
