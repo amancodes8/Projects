@@ -61,7 +61,7 @@ function handleSubmit(e) {
     if (count === 0) {
         gameOver = true;
         Value1.disabled = true;
-        feedback.style.display = "block";
+        feedback.style.display = "flex";
         hideOnWin.style.display = "none";
         if(v1 != randomNumber){
             feedback.textContent = "Game Over! You can no longer make guesses. Please restart";
