@@ -6,6 +6,23 @@ document.getElementById('cnt').innerHTML = count;
 
 let prguess = [];
 
+const refresh = document.querySelector('#refresh');
+
+// Function to rotate the element
+function rotate() {
+  refresh.style.transition = "transform 0.5s"; // Smooth transition effect over 1 second
+  refresh.style.transform = "rotate(360deg)";
+
+  // After 1 second (1000 milliseconds), reload the page
+  setTimeout(function() {
+    location.reload();
+  }, 500); // Adjust timing as needed to match the transition duration
+}
+
+// Event listener for clicking on the element to trigger rotation
+refresh.addEventListener('click', rotate);
+
+
 
 
 document.getElementById('form').addEventListener('submit', function(e) {
