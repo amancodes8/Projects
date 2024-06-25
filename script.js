@@ -1,4 +1,6 @@
-let count = 10;
+
+const randomNumber = parseInt(Math.random() * 10 + 1);
+let count = 5;
 let gameOver = false;
 document.getElementById('cnt').innerHTML = count;
 
@@ -20,9 +22,9 @@ document.getElementById('form').addEventListener('submit', function(e) {
 
   let flag = 0;
 
-  if (v1 < 1 || v1 > 100) {
+  if (v1 < 1 || v1 > 10) {
     feedback.style.display = "block";
-    feedback.textContent = "Please enter values between 1 and 100!";
+    feedback.textContent = "Please enter values between 1 and 10!";
     feedback.style.border = '1px solid red';
   } else {
     flag = 1;
@@ -34,6 +36,14 @@ document.getElementById('form').addEventListener('submit', function(e) {
   }
 
   document.getElementById('cnt').innerHTML = count;
+  const result = document.querySelector('#result');
+
+  if(randomNumber == v1){
+    result.innerHTML = "Congratulations You got the right number!"
+    gameOver = true;
+  }else{
+    result.innerHTML = `Original number = ${randomNumber}`
+  }
 
   // Check if count has reached 0
   if (count === 0) {

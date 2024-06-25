@@ -16,7 +16,7 @@
     <!-- main -->
     <main class="flex flex-col items-center justify-center bg-gradient-to-b from-blue-200 to-green-100  h-screen">
         <div class="flex flex-col bg-white font-extrabold h-auto p-5 pb-12 justify-center mx-auto">
-            <p class="flex flex-col p-2 text-xl text-slate-900 rounded-md font-semibold text-center mt-6 leading-6">Try a random number between 1 and 100 <span>You have 10 attempts to guess the right number</span></p>
+            <p class="flex flex-col p-2 text-xl text-slate-900 rounded-md font-semibold text-center mt-6 leading-6">Try a random number between 1 and 10 <span>You have 5 attempts to guess the right number</span></p>
 
             <form id="form" class="mt-8 flex flex-col justify-center mx-auto gap-2">
                 <label class="text-2xl text-slate-900" for="guessField" id="guess">Guess a number</label>
@@ -31,8 +31,11 @@
     <p>Previous Guesses: <span id="prg" class="text-sm"></span> </p>
     <p id="remaining">Guesses Remaining : <span id="cnt"></span> </p>
 </div>
+<div>
+    <p id="result"></p>   
+ </div>
     </main>
-
+ 
     <script src="script.js"></script>
 </body>
 </html>
